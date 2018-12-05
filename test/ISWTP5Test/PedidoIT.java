@@ -45,7 +45,7 @@ public class PedidoIT {
      * Test of getHora method, of class Pedido.
      */
     @Test
-    public void testGetHora() {
+    public void comprobarCalcularTotalDadounProductoconAgregadosCalcularPrecioAgregadosCalcularSubtotalYObtenerTotal() {
         Ingredientes a1 = new Ingredientes("I10","TOMATE",0,"POR DEFECTO",0);
         Ingredientes a2 = new Ingredientes("I11","LECHUGA",0,"POR DEFECTO",0);
         Ingredientes a3 = new Ingredientes("I12","MAYONESA",0,"POR DEFECTO",0);
