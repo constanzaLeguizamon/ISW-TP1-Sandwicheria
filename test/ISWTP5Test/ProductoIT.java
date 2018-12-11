@@ -44,11 +44,11 @@ public class ProductoIT {
      * Test of getCUP method, of class Producto.
      */
     @Test
-    public void comprobarCalcularPrecioAgregadoCantidaddeAgregadosEntre2Y4PreciodelosAgregadosEntre20y40() {
+    public void comprobarCalcularPrecioAgregadodeunProductoCantidaddeAgregadosEntre2Y4PreciodelosAgregadosEntre20y40() {
         //Configuración
-        Ingredientes a1 = new Ingredientes("I10","TOMATE",20,"POR DEFECTO",0);
-        Ingredientes a2 = new Ingredientes("I11","LECHUGA",20,"POR DEFECTO",0);
-        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH","NO");
+        Ingredientes a1 = new Ingredientes("I14","JAMON",20,"AGREGADO",1);
+        Ingredientes a2 = new Ingredientes("I15","QUESO",20,"AGREGADO",1);
+        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH",0);
         p1.agregar(a1);
         p1.agregar(a2);
         double precioAgregados =0;
@@ -61,7 +61,29 @@ public class ProductoIT {
     }
     
     @Test
-    public void comprobarCalcularPrecioAgregadoCantidaddeAgregadosEntre2Y8PreciodelosAgregadosEntre0y40() {
+    public void comprobarCalcularPrecioAgregadodeunProductoCantidaddeAgregadosEntre2Y8PreciodelosAgregados0() {
+        //Configuración
+        Ingredientes a1 = new Ingredientes("I10","TOMATE",0,"POR DEFECTO",0);
+        Ingredientes a2 = new Ingredientes("I11","LECHUGA",0,"POR DEFECTO",0);
+        Ingredientes a3 = new Ingredientes("I12","MAYONESA",0,"POR DEFECTO",0);
+        Ingredientes a4 = new Ingredientes("I13","MOSTAZA",0,"POR DEFECTO",0);
+        
+        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH",0);
+        p1.agregar(a1);
+        p1.agregar(a2);
+        p1.agregar(a3);
+        p1.agregar(a4);
+        double precioAgregados =0;
+        
+        //Ejecución
+        precioAgregados = p1.calcularPrecioAgregado();
+        
+        //Validación
+        assertEquals(0, precioAgregados, 0.01);
+    }
+    
+    @Test
+    public void comprobarCalcularPrecioAgregadodeunProductoCantidaddeAgregadosEntre2Y10PreciodelosAgregadosEntre0y40() {
         //Configuración
         Ingredientes a1 = new Ingredientes("I10","TOMATE",0,"POR DEFECTO",0);
         Ingredientes a2 = new Ingredientes("I11","LECHUGA",0,"POR DEFECTO",0);
@@ -72,7 +94,7 @@ public class ProductoIT {
         Ingredientes a7 = new Ingredientes("I16","HUEVO",20,"AGREGADO",1);
         Ingredientes a8 = new Ingredientes("I18","PICANTE",20,"AGREGADO",1);
         
-        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH","NO");
+        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH",0);
         p1.agregar(a1);
         p1.agregar(a2);
         p1.agregar(a3);
@@ -91,11 +113,46 @@ public class ProductoIT {
     }
     
     @Test
-    public void comprobarCalcularPrecioSubtotalValoresdelProdcutoEntre80Y100CantidaddeAgregadosEntre2Y4PreciodelosAgregadosEntre0y40() {
+    public void comprobarCalcularPrecioAgregadodeunProductoCantidaddeAgregadosEntre2Y8PreciodelosAgregadosEntre20y40() {
         //Configuración
-        Ingredientes a1 = new Ingredientes("I10","TOMATE",20,"POR DEFECTO",0);
-        Ingredientes a2 = new Ingredientes("I11","LECHUGA",20,"POR DEFECTO",0);
-        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH","NO");
+        Ingredientes a5 = new Ingredientes("I14","JAMON",40,"AGREGADO",1);
+        Ingredientes a6 = new Ingredientes("I15","QUESO",40,"AGREGADO",1);
+        Ingredientes a7 = new Ingredientes("I16","HUEVO",40,"AGREGADO",1);
+        Ingredientes a8 = new Ingredientes("I18","PICANTE",40,"AGREGADO",1);
+        
+        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH",0);
+        p1.agregar(a5);
+        p1.agregar(a6);
+        p1.agregar(a7);
+        p1.agregar(a8);
+        double precioAgregados =0;
+        
+        //Ejecución
+        precioAgregados = p1.calcularPrecioAgregado();
+        
+        //Validación
+        assertEquals(160, precioAgregados, 0.01);
+    }
+    
+    @Test
+    public void comprobarCalcularPrecioAgregadodeunProductoCuandoNoTieneAgregados() {
+        //Configuración
+        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH",0);
+        double precioAgregados =0;
+        
+        //Ejecución
+        precioAgregados = p1.calcularPrecioAgregado();
+        
+        //Validación
+        assertEquals(0, precioAgregados, 0.01);
+    }
+    
+    @Test
+    public void comprobarCalcularPrecioSubtotaldeunProductoValordelProductoEntre80Y100PreciodelosAgregadosEntre20Y40CantidaddelProductoEntre1Y3() {
+        //Configuración
+        Ingredientes a1 = new Ingredientes("I14","JAMON",20,"AGREGADO",1);
+        Ingredientes a2 = new Ingredientes("I15","QUESO",20,"AGREGADO",1);
+        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH",0);
         p1.agregar(a1);
         p1.agregar(a2);
         double precioAgregados = p1.calcularPrecioAgregado();
@@ -110,7 +167,31 @@ public class ProductoIT {
     }
     
     @Test
-    public void comprobarCalcularPrecioSubtotalValoresdelProdcutoEntre80Y100CantidaddeAgregadosEntre2Y8PreciodelosAgregadosEntre0y40() {
+    public void comprobarCalcularPrecioSubtotaldeunProductoValordelProductoEntre80Y100PreciodelosAgregados0CantidaddelProductoEntre1Y3() {
+        //Configuración
+        Ingredientes a1 = new Ingredientes("I10","TOMATE",0,"POR DEFECTO",0);
+        Ingredientes a2 = new Ingredientes("I11","LECHUGA",0,"POR DEFECTO",0);
+        Ingredientes a3 = new Ingredientes("I12","MAYONESA",0,"POR DEFECTO",0);
+        Ingredientes a4 = new Ingredientes("I13","MOSTAZA",0,"POR DEFECTO",0);
+        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH",0);
+        p1.agregar(a1);
+        p1.agregar(a2);
+        p1.agregar(a3);
+        p1.agregar(a4);
+        
+        double precioAgregados = p1.calcularPrecioAgregado();
+        int cantidad = 1;
+        double subtotal = 0;
+        
+        //Ejecución
+        subtotal = p1.calcularPrecioSubtotal(precioAgregados, cantidad);
+        
+        //Validación
+        assertEquals(80, subtotal, 0.01);
+    }
+    
+    @Test
+    public void comprobarCalcularPrecioSubtotaldeunProductoValordelProductoEntre80Y150PreciodelosAgregadosEntre80Y100CantidaddelProductoEntre1Y3() {
         //Configuración
         Ingredientes a1 = new Ingredientes("I10","TOMATE",0,"POR DEFECTO",0);
         Ingredientes a2 = new Ingredientes("I11","LECHUGA",0,"POR DEFECTO",0);
@@ -120,7 +201,8 @@ public class ProductoIT {
         Ingredientes a6 = new Ingredientes("I15","QUESO",40,"AGREGADO",1);
         Ingredientes a7 = new Ingredientes("I16","HUEVO",20,"AGREGADO",1);
         Ingredientes a8 = new Ingredientes("I18","PICANTE",20,"AGREGADO",1);
-        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH","NO");
+        
+        Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH",0);
         p1.agregar(a1);
         p1.agregar(a2);
         p1.agregar(a3);

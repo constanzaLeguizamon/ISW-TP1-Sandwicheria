@@ -18,17 +18,16 @@ public class Producto {
     private double precio;
     private int stock;
     private String descripcion;
-    private String agregadoEspe;
-    public static ArrayList<Ingredientes> ingredientes = new ArrayList<Ingredientes>();
-    public static ArrayList<Double> arraySubtotal = new ArrayList<Double>();
+    private double preciodelProdconAgreg;
+    ArrayList<Ingredientes> ingredientes = new ArrayList<Ingredientes>();
 
-    public Producto(String CUP, String nombre, double precio, int stock, String descripcion, String agregadoEspe) {
+    public Producto(String CUP, String nombre, double precio, int stock, String descripcion, double preciodelProdconAgreg) {
         this.CUP = CUP;
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
         this.descripcion = descripcion;
-        this.agregadoEspe = agregadoEspe;
+        this.preciodelProdconAgreg = preciodelProdconAgreg;
     }
 
     public String getCUP() {
@@ -71,20 +70,20 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public String getAgregadoEspe() {
-        return agregadoEspe;
+    public double getPreciodelProdconAgreg() {
+        return preciodelProdconAgreg;
     }
 
-    public void setAgregadoEspe(String agregadoEspe) {
-        this.agregadoEspe = agregadoEspe;
+    public void setPreciodelProdconAgreg(double preciodelProdconAgreg) {
+        this.preciodelProdconAgreg = preciodelProdconAgreg;
     }
 
-    public static ArrayList<Ingredientes> getIngredientes() {
+    public ArrayList<Ingredientes> getIngredientes() {
         return ingredientes;
     }
 
-    public static void setIngredientes(ArrayList<Ingredientes> ingredientes) {
-        Producto.ingredientes = ingredientes;
+    public void setIngredientes(ArrayList<Ingredientes> ingredientes) {
+        this.ingredientes = ingredientes;
     }
     
     public void agregar(Ingredientes i){
@@ -101,19 +100,18 @@ public class Producto {
     public static void AgregarAgregadosAlProducto(Producto producto, String nombreAgregado){
         Ingredientes i1 = null;
         for(int i = 0; i < Repositorio.n1.getIngredientes().size(); i++){
-            if(Repositorio.n1.getIngredientes().get(i).getNombre().equals(nombreAgregado)){
-                i1 = Repositorio.n1.getIngredientes().get(i);
+            i1 = Repositorio.n1.getIngredientes().get(i);
+            if(i1.getNombre().equals(nombreAgregado)){
                 producto.agregar(i1);
             }
         }
     }
     
-    public static double calcularPrecioAgregado(){
+    public double calcularPrecioAgregado(){
         double precio = 0;
         for(int i = 0; i < ingredientes.size(); i++){
             precio = precio + ingredientes.get(i).getPrecio();
         }
-        ingredientes.clear();
         return(precio);
     }
     
@@ -137,5 +135,6 @@ public class Producto {
             Ingredientes ing = ingredientes.get(i);
             ing.mostrarIngredientes();
         }
+        System.out.println("SUBTOTAL: " + preciodelProdconAgreg);
     }
 }

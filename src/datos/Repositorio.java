@@ -5,15 +5,12 @@
  */
 package datos;
 
-import controlador.ControladorSandwicheria;
 import modelo.Cajero;
 import modelo.Cliente;
-import modelo.Comprobante;
 import modelo.CondicionTributaria;
 import modelo.Ingredientes;
 import modelo.Negocio;
 import modelo.PDV1;
-import modelo.Pedido;
 import modelo.Producto;
 import modelo.Rubro;
 import modelo.TipoComprobante;
@@ -49,18 +46,14 @@ public class Repositorio {
     
     public static Cliente cli1 = new Cliente(201111111,tipo1,cond1,"","","","");
     
-    public static Pedido ped1 = new Pedido(0,ControladorSandwicheria.ObtenerFecha(),ControladorSandwicheria.ObtenerHora(),0,0);
-    
-    public static Comprobante comp1 = new Comprobante(0,ControladorSandwicheria.ObtenerFecha(),ControladorSandwicheria.ObtenerHora(),0);
-    
-    public static Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH","NO");
-    public static Producto p2 = new Producto("P11","HAMBURGUESA",70,100,"SANDWICH","SI");
-    public static Producto p3 = new Producto("P12","SANDWICH DE POLLO",75,50,"SANDWICH","NO");
-    public static Producto p4 = new Producto("P13","GASEOSA",40,30,"BEBIDA","NO CORRESPONDE");
-    public static Producto p5 = new Producto("P14","JUGO",25,25,"BEBIDA","NO CORRESPONDE");
-    public static Producto p6 = new Producto("P15","AGUA MINERAL",30,20,"BEBIDA","NO CORRESPONDE");
-    public static Producto p7 = new Producto("P16","AGUA GASIFICADA",35,20,"BEBIDA","NO CORRESPONDE");
-    public static Producto p8 = new Producto("P17","CERVEZA",45,30,"BEBIDA","NO CORRESPONDE");
+    public static Producto p1 = new Producto("P10","SANDWICH DE MILANESA",80,100,"SANDWICH",0);
+    public static Producto p2 = new Producto("P11","HAMBURGUESA",70,100,"SANDWICH",0);
+    public static Producto p3 = new Producto("P12","SANDWICH DE POLLO",75,50,"SANDWICH",0);
+    public static Producto p4 = new Producto("P13","GASEOSA",40,30,"BEBIDA",0);
+    public static Producto p5 = new Producto("P14","JUGO",25,25,"BEBIDA",0);
+    public static Producto p6 = new Producto("P15","AGUA MINERAL",30,20,"BEBIDA",0);
+    public static Producto p7 = new Producto("P16","AGUA GASIFICADA",35,20,"BEBIDA",0);
+    public static Producto p8 = new Producto("P17","CERVEZA",45,30,"BEBIDA",0);
     
     //SI ES POR DEFECTO, POR DEFECTO = 0, SI ES AGREGADO PARA CUALQUIER TIPO DE SANDWICH, GENERAL = 1,
     //SI ES UN AGREGADO ESPECIFICO DE UN TIPO DE SANDWICH, ESPECIFICO = CUP DEL SANDWICH AL QUE PERTENECE
@@ -139,11 +132,39 @@ public class Repositorio {
         n1.agregarCondicionTrib(cond5);
     }
     
-    public static void mostrarProductosIngredientes(){
-        n1.mostrarProductos();
-        n1.mostrarIngredientes();
-    }
-    
     public static TipoComprobante tipoCbte1 = new TipoComprobante(VentanaPedido.CbteTipo);
     
+    public static boolean listadodeProductosconAgregados(String CUPProd){
+        boolean resultado = false;
+        for(int i =0; i < n1.getProductos().size(); i++){
+            Producto prod = n1.getProductos().get(i);
+            if(prod.getCUP().equals(CUPProd)){
+                if(prod.getNombre().equals("SANDWICH DE MILANESA")){
+                    resultado = false;
+                }
+                if(prod.getNombre().equals("SANDWICH DE POLLO")){
+                    resultado = false;
+                }
+                if(prod.getNombre().equals("HAMBURGUESA")){
+                    resultado = true;
+                }
+                if(prod.getNombre().equals("GASEOSA")){
+                    resultado = false;
+                }
+                if(prod.getNombre().equals("JUGO")){
+                    resultado = false;
+                }
+                if(prod.getNombre().equals("AGUA MINERAL")){
+                    resultado = false;
+                }
+                if(prod.getNombre().equals("AGUA GASIFICADA")){
+                    resultado = false;
+                }
+                if(prod.getNombre().equals("CERVEZA")){
+                    resultado = false;
+                }
+            }
+        }
+        return (resultado);
+    }
 }

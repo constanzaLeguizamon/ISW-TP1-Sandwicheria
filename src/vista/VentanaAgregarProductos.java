@@ -486,7 +486,7 @@ public class VentanaAgregarProductos extends javax.swing.JFrame {
             jTFCup.setText("");
         }
         else{
-            Producto p1 = new Producto(CUP, nombre, precioProd, stockProd, descripcion, agregadoEspe);
+            Producto p1 = new Producto(CUP, nombre, precioProd, stockProd, descripcion,0);
             Repositorio.n1.agregarProducto(p1);
             JOptionPane.showMessageDialog(this, "PRODUCTO REGISTRADO CON EXITO");
             jTFCup.setText("");
@@ -586,7 +586,7 @@ public class VentanaAgregarProductos extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Repositorio.mostrarProductosIngredientes();
+        //Repositorio.mostrarProductosIngredientes();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

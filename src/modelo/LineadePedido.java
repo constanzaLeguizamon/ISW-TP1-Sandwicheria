@@ -76,7 +76,7 @@ public class LineadePedido {
     
     public void mostrarLineadePedido(){
         System.out.println("CUP: " + CUP);
-        System.out.println("NOMBRE DEL PRODCUTO: " + NombreProd);
+        System.out.println("NOMBRE DEL PRODUCTO: " + NombreProd);
         System.out.println("CANTIDAD: " + cantidad);
         System.out.println("PRECIO: " + precio);
         System.out.println("AGREGADOS: " + agregados);

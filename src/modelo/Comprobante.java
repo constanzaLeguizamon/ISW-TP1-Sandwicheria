@@ -5,7 +5,6 @@
  */
 package modelo;
 
-import controlador.ControladorSandwicheria;
 import datos.Repositorio;
 import java.util.ArrayList;
 
@@ -19,7 +18,6 @@ public class Comprobante {
     private String hora;
     private double montototalpedido;
     ArrayList<String> stringDetalle = new ArrayList<String>();
-    public static ArrayList<String[]> pasarDatosComprobante = new ArrayList<String[]>();
 
     public Comprobante(int numComprobante, String fecha, String hora, double montototalpedido) {
         this.numComprobante = numComprobante;
@@ -72,14 +70,15 @@ public class Comprobante {
         stringDetalle.add(str);
     }
     
-    public static void agregarComprobanteANeg(Pedido pedido, Comprobante comprobante){
-        ControladorSandwicheria.agregarDetalleaComprobante(comprobante, pedido.getMontototalpedido());
+    public static void agregarComprobanteANeg(Comprobante comprobante){
         Repositorio.n1.agregarFactura(comprobante);
     }
     
-    public void mostrarComprobanteString(){
-        System.out.println("COMPROBANTE");
+    public void mostrarComprobante(){
         System.out.println("");
+        System.out.println("**********************************************************************************");
+        System.out.println("COMPROBANTE");
+        System.out.println("N°: " + numComprobante);
         System.out.println("FECHA: " + fecha);
         System.out.println("HORA: " + hora);
         System.out.println("");

@@ -25,7 +25,6 @@ public class VentanaComandas extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
         VentanaComanda.PanelInfoNeg();
         ModelDetalleComanda();
-        //VentanaComan.DetalleComanda();
     }
     
     public void ModelDetalleComanda(){

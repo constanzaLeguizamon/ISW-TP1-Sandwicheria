@@ -27,7 +27,7 @@ public class VentanaComprobantes extends javax.swing.JFrame {
      * Creates new form F
      */
     
-    public static Comprobante comp1 = new Comprobante(0,ControladorSandwicheria.ObtenerFecha(),ControladorSandwicheria.ObtenerHora(),0);
+    public static Comprobante comp1 = null;
     
     public VentanaComprobantes() {
         initComponents();
@@ -36,7 +36,6 @@ public class VentanaComprobantes extends javax.swing.JFrame {
         
         VentanaComprobante.PanelInfoFac();
         VentanaComprobante.PanelInfoNeg();
-        jLNumFactura.setText("00000001");
         ModelTablaFactura();
     }
     
@@ -558,21 +557,21 @@ public class VentanaComprobantes extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Comprobante.agregarComprobanteANeg(pedido, comp1);
-        Turno.CantidaddePedidos();
-        Turno.TotalPedidos(pedido.getMontototalpedido());
-        
+        DefaultTableModel datosComprobante = (DefaultTableModel) jTDetalleFac.getModel();
         DefaultTableModel datosPedido = (DefaultTableModel) jTDetallePedido.getModel();
         DefaultTableModel datosComanda = (DefaultTableModel) jTComandas.getModel();
-        DefaultTableModel datosComprobante = (DefaultTableModel) jTDetalleFac.getModel();
+        
+        ControladorSandwicheria.agregarDetalleaComprobante(comp1, datosComprobante);
+        Comprobante.agregarComprobanteANeg(comp1);
+        Turno.CantidaddePedidos();
+        Turno.TotalPedidos(pedido.getMontototalpedido());
         jLTotal.setText("");
         
-        ControladorSandwicheria.NuevoPedido(pedido, datosPedido, datosComanda, datosComprobante);
-        jLNumFactura.setText("0000000" + Integer.toString(ControladorSandwicheria.NumComprobante()));
+        ControladorSandwicheria.NuevoPedido(datosPedido, datosComanda, datosComprobante);
         ControladorSandwicheria.VentanaPedido();
         
-        Repositorio.n1.mostrarStringPedidos();
-        Repositorio.n1.mostrarStringComprobantes();
+        Repositorio.n1.mostrarPedido();
+        Repositorio.n1.mostrarComprobante();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="LAPTOP-5N5G094T" name="ISWTP5Test.ProductoIT" skipped="0" tests="4" time="0.177" timestamp="2018-12-04T17:47:31">
+<testsuite errors="0" failures="0" hostname="LAPTOP-5N5G094T" name="ISWTP5Test.ProductoIT" skipped="0" tests="8" time="0.33" timestamp="2018-12-10T23:43:03">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="AR" />
@@ -10,7 +10,7 @@
     <property name="ant.core.lib" value="C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar" />
     <property name="javadoc.windowtitle" value="" />
     <property name="libs.jsp-compilation.javadoc" value="" />
-    <property name="user.dir" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria" />
+    <property name="user.dir" value="C:\Users\conty\Desktop\Sandwicheria" />
     <property name="java.vm.version" value="25.131-b11" />
     <property name="libs.MySQLDriver.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\ext\mysql-connector-java-5.1.23-bin.jar" />
     <property name="libs.eclipselinkmodelgen.src" value="" />
@@ -40,7 +40,7 @@
     <property name="libs.testng.src" value="" />
     <property name="libs.spring-webmvc3.0.src" value="" />
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
-    <property name="wsdl-AuthorizationService" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\xml-resources\web-service-references\AuthorizationService\wsdl\ds.dyndns.org_9000\AuthorizationService.wsdl" />
+    <property name="wsdl-AuthorizationService" value="C:\Users\conty\Desktop\Sandwicheria\xml-resources\web-service-references\AuthorizationService\wsdl\ds.dyndns.org_9000\AuthorizationService.wsdl" />
     <property name="libs.jaxb.maven-pom" value="" />
     <property name="os.arch" value="amd64" />
     <property name="libs.eclipselink.src" value="" />
@@ -49,7 +49,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ISWTP5Test.ProductoIT skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\build\test\results\TEST-ISWTP5Test.ProductoIT.xml crashfile=C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\build\junitvmwatcher2807158057047266609.properties propsfile=C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\build\junit7098322687967930030.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ISWTP5Test.ProductoIT skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\conty\Desktop\Sandwicheria\build\test\results\TEST-ISWTP5Test.ProductoIT.xml crashfile=C:\Users\conty\Desktop\Sandwicheria\build\junitvmwatcher7582517946885571971.properties propsfile=C:\Users\conty\Desktop\Sandwicheria\build\junit6358666920303880919.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -88,7 +88,7 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="\" />
-    <property name="javac.includesfile.binary" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\null1850139713" />
+    <property name="javac.includesfile.binary" value="C:\Users\conty\Desktop\Sandwicheria\null1496343550" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="false" />
     <property name="javac.test.processorpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\AbsoluteLayout.jar:build/classes:C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar:C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar" />
@@ -101,19 +101,19 @@
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="C:\Program Files\NetBeans 8.2\ide\docs\jaxb-api-doc.zip" />
     <property name="libs.struts.classpath" value="C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\antlr-2.7.2.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\bsf-2.3.0.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\commons-beanutils-1.8.0.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\commons-chain-1.2.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\commons-digester-1.8.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\commons-fileupload-1.1.1.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\commons-io-1.1.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\commons-logging-1.0.4.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\commons-validator-1.3.1.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\jstl-1.0.2.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\oro-2.0.8.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\standard-1.0.6.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\struts-core-1.3.10.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\struts-el-1.3.10.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\struts-extras-1.3.10.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\struts-faces-1.3.10.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\struts-mailreader-dao-1.3.10.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\struts-scripting-1.3.10.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\struts-taglib-1.3.10.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\struts\struts-tiles-1.3.10.jar" />
-    <property name="javac.includes.binary" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\build\test\classes\ISWTP5Test\ProductoIT.class" />
+    <property name="javac.includes.binary" value="C:\Users\conty\Desktop\Sandwicheria\build\test\classes\ISWTP5Test\ProductoIT.class" />
     <property name="ant.home" value="C:\Program Files\NetBeans 8.2\extide\ant" />
     <property name="libs.junit_4.src" value="C:\Program Files\NetBeans 8.2\platform\docs\junit-4.12-sources.jar" />
     <property name="libs.testng.classpath" value="C:\Program Files\NetBeans 8.2\platform\modules\ext\testng-6.8.1-dist.jar" />
     <property name="libs.absolutelayout.maven-pom" value="" />
     <property name="ant.java.version" value="1.8" />
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\conty\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Microsoft VS Code\bin;." />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\conty\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Microsoft VS Code\bin;." />
     <property name="javadoc.author" value="false" />
     <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
     <property name="libs.spring-framework400.src" value="" />
     <property name="libs.PostgreSQLDriver.src" value="" />
     <property name="sun.arch.data.model" value="64" />
-    <property name="basedir" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria" />
+    <property name="basedir" value="C:\Users\conty\Desktop\Sandwicheria" />
     <property name="libs.jpa20-persistence.maven-pom" value="" />
     <property name="jar.compress" value="false" />
     <property name="path.separator" value=";" />
@@ -158,8 +158,8 @@
     <property name="libs.spring-webmvc4.0.maven-pom" value="" />
     <property name="libs.spring-framework300.src" value="" />
     <property name="libs.jstl.src" value="" />
-    <property name="ant.file.Sandwicheria" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\build.xml" />
-    <property name="empty.dir" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\build\empty" />
+    <property name="ant.file.Sandwicheria" value="C:\Users\conty\Desktop\Sandwicheria\build.xml" />
+    <property name="empty.dir" value="C:\Users\conty\Desktop\Sandwicheria\build\empty" />
     <property name="version-output" value="java version &quot;1.8" />
     <property name="test.binarytestincludes" value="" />
     <property name="libs.hibernate4-persistencemodelgen.src" value="" />
@@ -197,7 +197,7 @@
     <property name="javac.processorpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\AbsoluteLayout.jar" />
     <property name="libs.hamcrest.maven-pom" value="" />
     <property name="javac.compilerargs" value="" />
-    <property name="ant.file" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\build.xml" />
+    <property name="ant.file" value="C:\Users\conty\Desktop\Sandwicheria\build.xml" />
     <property name="libs.beans-binding.maven-pom" value="" />
     <property name="libs.hibernate4-support.javadoc" value="C:\Program Files\NetBeans 8.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
     <property name="libs.jsf12.classpath" value="C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\jsf-1_2\commons-beanutils.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\jsf-1_2\commons-collections.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\jsf-1_2\commons-digester.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\jsf-1_2\commons-logging.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\jsf-1_2\jsf-api.jar;C:\Users\conty\AppData\Roaming\NetBeans\8.2\modules\ext\jsf-1_2\jsf-impl.jar" />
@@ -276,7 +276,7 @@
     <property name="jdk.launcher.addexports.5" value="java.management/sun.management=ALL-UNNAMED" />
     <property name="jdk.launcher.addexports.4" value="java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED" />
     <property name="jdk.launcher.addexports.3" value="java.desktop/sun.awt.im=ALL-UNNAMED" />
-    <property name="work.dir" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria" />
+    <property name="work.dir" value="C:\Users\conty\Desktop\Sandwicheria" />
     <property name="jdk.launcher.addexports.2" value="java.desktop/java.awt.peer=ALL-UNNAMED" />
     <property name="libs.jaxb.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb-impl.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb-xjc.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb1-impl.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\api\jaxb-api.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\api\jsr173_1.0_api.jar" />
     <property name="jdk.launcher.addexports.1" value="java.base/jdk.internal.jrtfs=ALL-UNNAMED" />
@@ -295,7 +295,7 @@
     <property name="junit.forkmode" value="perTest" />
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes" />
     <property name="javac.target" value="1.8" />
-    <property name="built-jar.properties" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\build\built-jar.properties" />
+    <property name="built-jar.properties" value="C:\Users\conty\Desktop\Sandwicheria\build\built-jar.properties" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="src.dir" value="src" />
     <property name="libs.jpa2-persistence.src" value="" />
@@ -331,7 +331,7 @@
     <property name="excludes" value="" />
     <property name="libs.jpa2-persistence.javadoc" value="C:\Program Files\NetBeans 8.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
-    <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\modules\ext\AbsoluteLayout.jar;C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\build\classes;C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar;C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar;C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\build\test\classes;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-junit4.jar" />
+    <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\modules\ext\AbsoluteLayout.jar;C:\Users\conty\Desktop\Sandwicheria\build\classes;C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar;C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar;C:\Users\conty\Desktop\Sandwicheria\build\test\classes;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-junit4.jar" />
     <property name="do.mkdist" value="true" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.jpa20-persistence.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar" />
@@ -377,12 +377,16 @@
     <property name="libs.spring-webmvc4.0.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-webmvc-4.0.1.RELEASE.jar" />
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
-    <property name="ant.file.Sandwicheria-impl" value="C:\Users\conty\OneDrive\Documentos\4-Ingenieria del Software\Trabajo Practico N° 1 - Repaso AOO, DOO, POO\Sandwicheria\nbproject\build-impl.xml" />
+    <property name="ant.file.Sandwicheria-impl" value="C:\Users\conty\Desktop\Sandwicheria\nbproject\build-impl.xml" />
   </properties>
-  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioAgregadoCantidaddeAgregadosEntre2Y8PreciodelosAgregadosEntre0y40" time="0.009" />
-  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioAgregadoCantidaddeAgregadosEntre2Y4PreciodelosAgregadosEntre20y40" time="0.0" />
-  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioSubtotalValoresdelProdcutoEntre80Y100CantidaddeAgregadosEntre2Y4PreciodelosAgregadosEntre0y40" time="0.0" />
-  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioSubtotalValoresdelProdcutoEntre80Y100CantidaddeAgregadosEntre2Y8PreciodelosAgregadosEntre0y40" time="0.0" />
+  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioAgregadodeunProductoCantidaddeAgregadosEntre2Y4PreciodelosAgregadosEntre20y40" time="0.006" />
+  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioAgregadodeunProductoCuandoNoTieneAgregados" time="0.0" />
+  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioSubtotaldeunProductoValordelProductoEntre80Y100PreciodelosAgregadosEntre20Y40CantidaddelProductoEntre1Y3" time="0.0" />
+  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioAgregadodeunProductoCantidaddeAgregadosEntre2Y10PreciodelosAgregadosEntre0y40" time="0.0" />
+  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioAgregadodeunProductoCantidaddeAgregadosEntre2Y8PreciodelosAgregados0" time="0.0" />
+  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioAgregadodeunProductoCantidaddeAgregadosEntre2Y8PreciodelosAgregadosEntre20y40" time="0.0" />
+  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioSubtotaldeunProductoValordelProductoEntre80Y150PreciodelosAgregadosEntre80Y100CantidaddelProductoEntre1Y3" time="0.001" />
+  <testcase classname="ISWTP5Test.ProductoIT" name="comprobarCalcularPrecioSubtotaldeunProductoValordelProductoEntre80Y100PreciodelosAgregados0CantidaddelProductoEntre1Y3" time="0.001" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

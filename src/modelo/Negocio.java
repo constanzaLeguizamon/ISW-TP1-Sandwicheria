@@ -24,8 +24,6 @@ public class Negocio {
     ArrayList<Cajero> cajero = new ArrayList<Cajero>();
     ArrayList<Comprobante> comprobante = new ArrayList<Comprobante>();
     ArrayList<CondicionTributaria> condtrib = new ArrayList<CondicionTributaria>();
-    ArrayList<String> stringPedidos = new ArrayList<String>();
-    ArrayList<String> stringComprobantes = new ArrayList<String>();
     
     public static ArrayList<Producto> productos = new ArrayList<Producto>();
     public static ArrayList<Ingredientes> ingredientes = new ArrayList<Ingredientes>();
@@ -146,8 +144,6 @@ public class Negocio {
         this.condtrib = condtrib;
     }
     
-    
-    
     public ArrayList<Producto> getProductos() {
         return productos;
     }
@@ -163,23 +159,6 @@ public class Negocio {
     public void setIngredientes(ArrayList<Ingredientes> ingredientes) {
         Negocio.ingredientes = ingredientes;
     }
-
-    public ArrayList<String> getStringPedidos() {
-        return stringPedidos;
-    }
-
-    public void setStringPedidos(ArrayList<String> stringPedidos) {
-        this.stringPedidos = stringPedidos;
-    }
-
-    public ArrayList<String> getStringComprobantes() {
-        return stringComprobantes;
-    }
-
-    public void setStringComprobantes(ArrayList<String> stringComprobantes) {
-        this.stringComprobantes = stringComprobantes;
-    }
-    
     
     public void agregarPedido(Pedido p){
         pedido.add(p);
@@ -205,25 +184,10 @@ public class Negocio {
         ingredientes.add(ing);
     }
     
-    public void agregarStringPedidos(String str){
-        stringPedidos.add(str);
-    }
-    
-    public void agregarStringCompr(String str){
-        stringComprobantes.add(str);
-    }
-    
-    
     public void mostrarCajero(){
         for(int i = 0; i < cajero.size(); i++){
             Cajero c = cajero.get(i);
             c.mostrarCajero();
-        }
-    }
-    
-    public void mostrarFactura(){
-        for(int i = 0; i < comprobante.size(); i++){
-            Comprobante c = comprobante.get(i);
         }
     }
     
@@ -272,28 +236,17 @@ public class Negocio {
         return(confirmacion);
     }
     
-    public void mostrarStringPedidos(){
-        System.out.println("PEDIDOS");
-        for(int i = 0; i < stringPedidos.size(); i++){
-            System.out.println(stringPedidos.get(i));
-            System.out.println("-----------------------------------------------------------------------------------");
-            System.out.println("");
-        }
-    }
-    
-    public void mostrarStringComprobantes(){
-        System.out.println("COMPROBANTES");
-        for(int i = 0; i < stringComprobantes.size(); i++){
-            System.out.println(stringComprobantes.get(i));
-            System.out.println("-----------------------------------------------------------------------------------");
-            System.out.println("");
-        }
-    }
-    
     public void mostrarPedido(){
         for(int i = 0; i < pedido.size(); i++){
             Pedido p = pedido.get(i);
             p.mostrarPedido();
+        }
+    }
+    
+    public void mostrarComprobante(){
+        for(int i = 0; i < comprobante.size(); i++){
+            Comprobante c = comprobante.get(i);
+            c.mostrarComprobante();
         }
     }
 }

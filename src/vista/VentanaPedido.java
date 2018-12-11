@@ -98,6 +98,7 @@ public class VentanaPedido {
         jBCancelar.setEnabled(false);
         jLTituloCantidad.setEnabled(true);
         jSpinner1.setEnabled(true);
+        jSpinner1.setValue(1);
     }
     
     public static void PanelInfoNegocio(){
@@ -216,7 +217,7 @@ public class VentanaPedido {
     
     public static void FinTurno(){
         //ES 17
-        if(ControladorSandwicheria.ObtenerHoraTurno() == 19){
+        if(ControladorSandwicheria.ObtenerHoraTurno() == 12){
             JOptionPane.showMessageDialog(null, ControladorSandwicheria.ObtenerHoraTurno());
             jBFinalizarTurno.setEnabled(true);
         }

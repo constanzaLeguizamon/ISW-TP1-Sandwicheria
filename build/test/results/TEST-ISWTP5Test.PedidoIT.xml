@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="LAPTOP-5N5G094T" name="ISWTP5Test.PedidoIT" skipped="0" tests="1" time="0.138" timestamp="2018-12-05T19:22:07">
+<testsuite errors="0" failures="0" hostname="LAPTOP-5N5G094T" name="ISWTP5Test.PedidoIT" skipped="0" tests="3" time="1.438" timestamp="2018-12-11T00:16:09">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="AR" />
@@ -49,7 +49,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ISWTP5Test.PedidoIT skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\conty\Desktop\Sandwicheria\build\test\results\TEST-ISWTP5Test.PedidoIT.xml crashfile=C:\Users\conty\Desktop\Sandwicheria\build\junitvmwatcher739437110453383285.properties propsfile=C:\Users\conty\Desktop\Sandwicheria\build\junit2912317372095878218.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ISWTP5Test.PedidoIT skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\conty\Desktop\Sandwicheria\build\test\results\TEST-ISWTP5Test.PedidoIT.xml crashfile=C:\Users\conty\Desktop\Sandwicheria\build\junitvmwatcher923470359038459438.properties propsfile=C:\Users\conty\Desktop\Sandwicheria\build\junit4563214772082083322.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -88,7 +88,7 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="\" />
-    <property name="javac.includesfile.binary" value="C:\Users\conty\Desktop\Sandwicheria\null1306020813" />
+    <property name="javac.includesfile.binary" value="C:\Users\conty\Desktop\Sandwicheria\null1222053400" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="false" />
     <property name="javac.test.processorpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\AbsoluteLayout.jar:build/classes:C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar:C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar" />
@@ -379,7 +379,9 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="ant.file.Sandwicheria-impl" value="C:\Users\conty\Desktop\Sandwicheria\nbproject\build-impl.xml" />
   </properties>
-  <testcase classname="ISWTP5Test.PedidoIT" name="comprobarCalcularTotalDadounProductoconAgregadosCalcularPrecioAgregadosCalcularSubtotalYObtenerTotal" time="0.009" />
+  <testcase classname="ISWTP5Test.PedidoIT" name="comprobarCalcularTotaldelPedidoCantidaddeProductosdelPedido2CantidaddelProductoEntre1Y3PreciodelosAgregadosEntre20Y40SubtotaldelProdcutoEntre40Y300" time="1.288" />
+  <testcase classname="ISWTP5Test.PedidoIT" name="comprobarCalcularTotaldelPedidoCantidaddeProductosdelPedido2CantidaddelProductoEntre1Y3PreciodelosAgregados0SubtotaldelProdcutoEntre40Y200" time="0.001" />
+  <testcase classname="ISWTP5Test.PedidoIT" name="comprobarCalcularTotaldelPedidoCantidaddeProductosdelPedido1CantidaddelProductoEntre1Y3PreciodelosAgregadosEntre20Y40SubtotaldelProdcutoEntre40Y100" time="0.001" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

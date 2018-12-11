@@ -14,8 +14,8 @@ import modelo.Pedido;
 import modelo.Turno;
 import static vista.VentanaComandas.jTComandas;
 import static vista.VentanaComprobantes.jLNeto;
+import static vista.VentanaComprobantes.jLNumFactura;
 import static vista.VentanaComprobantes.jLTotalFac;
-import static vista.VentanaPedido.IniciarPedido;
 import static vista.VentanaPedido.MostrarBotonesBarraBaja;
 import static vista.VentanaPedido.OcultarBotonesBarraBaja;
 import static vista.VentanaTurnos.jLCantPedidos;
@@ -30,21 +30,22 @@ public class VentanaPedidos extends javax.swing.JFrame {
     /**
      * Creates new form VentanaPedidos
      */
-    public static Pedido pedido = new Pedido(ControladorSandwicheria.NumPedido(0),ControladorSandwicheria.ObtenerFecha(),ControladorSandwicheria.ObtenerHora(),0,0);
+    public static Pedido pedido = null;
     
     public VentanaPedidos() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         VentanaPedido.PanelInfoNegocio();
         VentanaPedido.PanelCondTrib();
-        IniciarPedido();
+        VentanaPedido.IniciarPedido();
         VentanaPedido.FinTurno();
         
         DefaultTableModel datosInicio = (DefaultTableModel) jTable1.getModel();
         TableColumnModel columnModel = jTable1.getColumnModel();
-        columnModel.getColumn(0).setPreferredWidth(50); 
+        columnModel.getColumn(0).setPreferredWidth(20); 
         columnModel.getColumn(1).setPreferredWidth(100);
-        columnModel.getColumn(2).setPreferredWidth(50);
+        columnModel.getColumn(2).setPreferredWidth(20);
+        columnModel.getColumn(3).setPreferredWidth(50);
         ControladorSandwicheria.mostrarProductosDisponibles(datosInicio);
     }
     /**
@@ -226,11 +227,11 @@ public class VentanaPedidos extends javax.swing.JFrame {
 
             },
             new String [] {
-                "CUP", "Nombre", " "
+                "CUP", "Nombre", " ", "Descripción"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+                java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -680,12 +681,14 @@ public class VentanaPedidos extends javax.swing.JFrame {
     private void jBContinuarComaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBContinuarComaActionPerformed
         // TODO add your handling code here:
         Pedido.agregarPedidoANeg(pedido);
+        int numComprobante = ControladorSandwicheria.NuevoComprobante(pedido.getMontototalpedido());
         DefaultTableModel datos = (DefaultTableModel) jTDetallePedido.getModel();
         DefaultTableModel datosComanda = (DefaultTableModel) jTComandas.getModel();
         ControladorSandwicheria.PasarDatosaDetalleComanda(datos, datosComanda);
         ControladorSandwicheria.VentanaComanda();
         jLNeto.setText(String.valueOf(pedido.getMontonetopedido()));
         jLTotalFac.setText(String.valueOf(pedido.getMontototalpedido()));
+        jLNumFactura.setText("0000000" + Integer.toString(numComprobante));
     }//GEN-LAST:event_jBContinuarComaActionPerformed
 
     private void jBAgregPedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAgregPedActionPerformed
@@ -696,17 +699,19 @@ public class VentanaPedidos extends javax.swing.JFrame {
         DefaultTableModel datos3 = (DefaultTableModel) jTAgregEspe.getModel();
         DefaultTableModel datos4 = (DefaultTableModel) jTDetallePedido.getModel();
         int cont = 0;
+        int seleccionado = 0;
         String CUPProducto = null;
         Boolean checked = false;
         for(int i = 0; i < jTable1.getRowCount(); i++){
             checked = Boolean.valueOf(jTable1.getValueAt(i,2).toString());
             if(checked){
                 cont = cont + 1;
+                seleccionado = i;
                 CUPProducto = String.valueOf(jTable1.getValueAt(i,0));
             }
         }
         int cantidad = (int) jSpinner1.getValue();
-        ControladorSandwicheria.addProductoADetalledePedido(cont, CUPProducto, cantidad, datosInicio, datos1, datos2, datos3, datos4, pedido);
+        ControladorSandwicheria.addProductoADetalledePedido(cont, seleccionado, CUPProducto, cantidad, datosInicio, datos1, datos2, datos3, datos4, pedido);
         jLTotal.setText(String.valueOf(ControladorSandwicheria.getTotal()));
     }//GEN-LAST:event_jBAgregPedActionPerformed
 
